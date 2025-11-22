@@ -1,0 +1,78 @@
+CodeForge - AI-Powered Full-Stack Project Generator
+Overview
+CodeForge is an intelligent code generation platform that transforms natural language descriptions into complete, production-ready React projects. It combines the power of AI agents with a professional web-based IDE interface.
+
+Core Concept
+Instead of manually coding components from scratch, you describe what you want to build, and CodeForge's AI agents analyze your requirements, make technical decisions, and generate a complete project with:
+
+React components
+Tailwind CSS styling
+Test files
+Storybook stories
+Proper project structure
+Architecture
+Backend (Python + FastAPI)
+Location: python-agents/
+
+4 Specialized AI Agents:
+
+Perception Engine (Agent 1) - Analyzes your project description and extracts UI components, design tokens, layout structure
+Reasoning Engine (Agent 2) - Decides on the optimal tech stack (React, Tailwind, etc.)
+Synthesis Engine (Agent 3) - Generates actual code for components, tests, and stories
+UX Bridge (Agent 4) - Exports files and manages the project structure
+Technology:
+
+FastAPI for REST API + WebSocket
+Gemini AI (via OpenAI SDK) for intelligent code generation
+Real-time progress streaming to frontend
+Frontend (Next.js + React)
+Location: nextjs-react-frontend/
+
+Features:
+
+Chainlit-style Chat Interface - Conversational project creation
+File Explorer - Tree view of generated files
+Code Editor - View generated code with file tabs
+Real-time Updates - See generation progress live
+Technology:
+
+Next.js 16 with App Router
+Tailwind CSS
+WebSocket for real-time communication
+How It Works
+User Input: You describe your project in natural language
+Example: "Create a dashboard with user authentication, sidebar navigation, and data tables"
+AI Processing: The 4 agents work in sequence:
+Agent 1 extracts components (Sidebar, DataTable, LoginForm, etc.)
+Agent 2 selects React + Tailwind + Next.js
+Agent 3 generates code for each component
+Agent 4 organizes files into a proper structure
+Output: Complete project with:
+src/
+├── components/
+│   ├── Sidebar.jsx
+│   ├── Sidebar.test.js
+│   ├── Sidebar.stories.js
+│   ├── DataTable.jsx
+│   └── ...
+View & Download: Browse files in the UI, view code, download as ZIP
+Key Differentiators
+Agentic Architecture: Multiple specialized AI agents vs single monolithic model
+Production-Ready: Generates tests and Storybook stories, not just components
+Real-time Feedback: See exactly what the AI is doing as it works
+Web-Based IDE: No local setup needed, everything in the browser
+Current Status
+✅ Working:
+
+Backend agents generate React components
+Frontend displays files in explorer
+File tabs with close buttons
+Real-time WebSocket updates
+Chat interface for project input
+🚧 Planned Enhancements:
+
+Monaco Editor for syntax highlighting
+Resizable panels
+Download project as ZIP
+File search
+Code editing capabilities
